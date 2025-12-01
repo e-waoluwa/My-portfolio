@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> stopwatch </title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.overlay-text {
+  background: black;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 5px solid palevioletred;
+}
+
+#display {
+  color: pink;
+  font-size: 35px;
+  margin: 10px 0;
+  word-break: break-word;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: palevioletred;
+  color: black;
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 100px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: black;
+  color: palevioletred;
+  border: 2px solid palevioletred;
+}
+
+/* Mobile optimization */
+@media (max-width: 500px) {
+  #display {
+    font-size: 28px;
+  }
+
+  button {
+    width: 80px;
+    font-size: 16px;
+  }
+
+  .overlay-text {
+    padding: 15px;
+  }
+}
+</style>
+
+</head>
+<body>
+    <div class="overlay-text">
+    <p id="display" style="color:pink; font-size: 35px;"> 00:00:00:00
+    </p> <br>
+    <div class="container">
+    <div class="button">
+        <button type="button" onclick="start()">Start</button>
+    </div>
+       <div class="button"> <button type="button" onclick="stop()">Stop</button> </div>
+       <div class="button"> <button type="button" onclick="Reset()">Reset</button>
+    </div>
+</div>
+</div>
+<script>
+     let milliseconds=0;
+    let seconds=0;
+    let minutes=0;
+    let hours=0;
+    let timer;
+    let running= false;
+
+    function updateDisplay() {
+      const h = hours < 10 ? "0" + hours : hours;
+      const m = minutes < 10 ? "0" + minutes : minutes;
+      const s = seconds < 10 ? "0" + seconds : seconds;
+       const ms = milliseconds < 10 ? "0" + milliseconds : milliseconds;
+      document.getElementById("display").textContent = `${h}:${m}:${s}:${ms}`;
+    }
+
+
+
+    function start() {
+
+            if(!running) {
+        running=true;
+            timer = setInterval(() => {
+milliseconds++
+if (milliseconds===100){
+    milliseconds=0 
+    seconds++;}
+
+if (seconds===60){
+seconds=0
+minutes++;
+    }
+    if (minutes===60){
+        minutes=0
+        hours++;
+    }
+    updateDisplay();
+},10); }
+}
+function stop() {
+    running=false;
+    clearInterval(timer);
+}
+
+function Reset() {
+    running=false;
+    clearInterval(timer)
+   milliseconds=0;
+    seconds=0;
+    minutes=0;
+    hours=0;
+
+ updateDisplay();
+}
+    
+
+</script>
+
+</body>
+</html>

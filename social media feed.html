@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Social media </title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+body{background-color:#aaaa;
+color:black;}
+
+
+button{background-color:black; color:#eee; 
+font-size:12px; 
+padding:4px;
+border:2px solid black;
+}
+
+button:hover{background-color:white;
+color:black; 
+}
+
+
+
+
+#nav a{background-color:black;
+color:white;
+padding:12px;
+position:relative;
+transition:0.3s;
+left:-80px;}
+
+
+
+
+
+    .sidenav {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 60px;
+      z-index: 1;
+    }
+
+    .sidenav a {
+      position: absolute;
+      right: -100px;
+      transition: 0.3s;
+      padding: 15px;
+      width: 160px;
+      text-decoration: none;
+      color: white;
+     font-size:23px;
+text-align:right;
+   
+      border-radius: 5px 0 0 5px;
+    }
+
+    .sidenav a:hover {
+      right: 0;
+    }
+
+    #profile {
+      top: 20px;
+color:black;
+      background-color:#ddd;}
+
+
+   #blog {
+      top: 80px;
+      background-color: black;}
+
+
+   #projects {
+      top: 140px;
+color:black;
+      background-color: white;}
+
+
+
+   #contact{
+      top: 200px;
+      background-color:#aaa;}
+
+.profile{background-color:gray;
+border-radius: 5px 5px 5px 5px;
+padding:4px;
+box-shadow:2px 2px 10px rgba(0, 0, 0,3);}
+
+.prof{width:25%;
+height:30%;
+object-fit:fill;
+align-items:center;
+border-radius:50%;}
+
+.ehn{background-color:black;
+text-align:center;
+padding:5px;
+color:white;
+display:inline-block; 
+border:2px solid black;
+text-decoration:none;}
+
+.ehn a{color:white;
+display:block;
+text-decoration:none;}
+
+.ehn:hover{background-color:#aaa;
+color:black;}
+
+
+.footer{background-color:black;
+color:gray;
+text-align:center;
+width:100%;
+height:200px;}
+
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* Make all your main sections dark */
+body.dark .profile,
+body.dark #Posts,
+body.dark .sidenav,
+body.dark .footer,
+body.dark input,
+body.dark button {
+  background-color: #1e1e1e !important;
+  color: #eee !important;
+  border-color: #444 !important;
+}
+
+body.dark .sidenav a {
+  background-color: #333 !important;
+  color: #eee !important;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1024px) {
+  .sidenav {
+    width: 50px;
+  }
+  .sidenav a {
+    font-size: 18px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+  }
+
+  .sidenav a {
+    position: static;
+    padding: 10px;
+    font-size: 16px;
+    background: none;
+    color: white;
+    border-radius: 0;
+  }
+
+  body {
+    padding-top: 60px; /* Keeps content below nav */
+  }
+
+  img,
+  video {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile {
+    width: 95%;
+    margin: auto;
+  }
+
+  .prof {
+    width: 120px;
+    height: 120px;
+  }
+
+  #themeToggle {
+    min-width: 140px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2, h3, h4 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  button {
+    padding: 6px;
+    font-size: 11px;
+  }
+}
+
+
+</style>
+<body>
+
+
+
+<div class="sidenav">
+  <a href="#profile" id="profile">Profile</a>
+  <a href="#blog" id="blog">Posts</a>
+  <a href="#projects" id="projects">Requests</a> 
+  <a href="#contact" id="contact">Contact</a>
+</div>
+
+
+
+<div style="position:fixed; bottom:20px; right:20px;">
+ <button id="themeToggle" 
+        style="padding:10px 20px; border:none; border-radius:10px; background:#222; color:#fff; cursor:pointer; min-width:180px; white-space:nowrap;">
+  Dark Mode
+</button>
+
+</div>
+
+
+<img src="https://www.dropbox.com/scl/fi/d9f4spm798q97a8krvd39/Photo-01-05-2025-11-46-20-1.jpg?rlkey=2ztnjaoqi951q26jksrw0enyu&st=y80v1axe&dl=1" style="width:100%; max-width: 1800px; height:400px;">
+
+
+
+
+ <div id="profile" class="profile"> 
+<div style="text-align:center;">
+<h2>My profile</h2> 
+<img class="prof" src="https://www.dropbox.com/scl/fi/a88jfaqhnuanm7rwe43rs/Photo-01-05-2025-12-19-53.jpg?rlkey=6ng42fz00tl850sx079baip9p&st=fr1ri21w&dl=1" style="height:200px; max-width: 600px; margin-right:21px;"> 
+<br>
+<h3>Adigun Zainab Ewaoluwa</h3>
+<hr style="border:1px solid black; width:370px;float:left; "> </br>
+<p> <i class="fa-solid fa-graduation-cap"></i>&nbsp;&nbsp;
+Lagos State University <br><i class="fa-solid fa-book"></i>&nbsp;&nbsp; Computer and Electronics Engineering </p>
+</div> </div>
+<br> <br>
+
+<div id="Posts"><h2> <i> For you page</i> </h2>
+ <br>
+<div style="flex: 1; padding: 10px; background-color: #eee;">
+  Type a status <br>
+  <input id="statusInput" style="background-color:black; color:white; height:26px;" type="text" placeholder="Status:Feeling Blue" value=""> </input> <br> <br>
+  <div class="button">
+     <input id="fileInput" type="file" style="background-color: black; color: white; width:170px; padding:3px;" multiple>
+&nbsp;&nbsp; &nbsp;&nbsp;
+    <button id="postBtn"  style="padding:8px; width:20%;" type="button"> Post</button>
+  </div> </div> </div>
+
+<br> <br>
+
+ <div class="profile"> 
+
+<img class="prof" src="https://www.dropbox.com/scl/fi/bz7og7ixa1b1addr8kbbc/Photo-01-05-2025-18-22-19-1.jpg?rlkey=57ib5e2yq3ynuonn9ax35zmvk&st=1taryqz2&dl=1" style="height:200px; margin-right:21px;"><h4>Benjamin Peace</h4>
+
+<img src="https://www.dropbox.com/scl/fi/b1ww6tybftiu9z6rqzsu4/Photo-01-05-2025-18-37-34.jpg?rlkey=vtw0qwl7bp3asih96nlcngoki&st=wpennpd5&dl=1" style="width:100%; max-width: 600px; height:400px;">
+<p> <i class="fa-regular fa-heart"></i>24.6k &nbsp;&nbsp; <i class="fa-regular fa-comment"></i> 700 &nbsp;&nbsp; <i class="fa-regular fa-share"></i>5k</p> 
+<p><b>Peace</b>&nbsp;&nbsp Happy Sunday.</p>
+
+<hr style="border:1px solid black; width:370px;float:left; "> <br> <br>
+
+<img class="prof" src="https://www.dropbox.com/scl/fi/riw4dyzcsfdhlj00eb7m8/Photo-01-05-2025-18-22-19-2.jpg?rlkey=klatdsk7krxp7x8eid601s06h&st=ljaofzyn&dl=1" style="height:200px; margin-right:21px;"> <h4>Adewunmi Oluwanifemi</h4>
+
+<img src="https://www.dropbox.com/scl/fi/jffoyrfd3a84gr36i05ad/Photo-01-05-2025-18-37-34-1.jpg?rlkey=jei05anbyr8gp1icg29kd6z76&st=h190ei3r&dl=1" style="max-width: 600px; ;width:100%; height:400px;">
+<p> <i class="fa-regular fa-heart"></i>300k &nbsp;&nbsp; <i class="fa-regular fa-comment"></i> 400 &nbsp;&nbsp; <i class="fa-regular fa-share"></i>3k</p> 
+<p><b>Nifemi</b>&nbsp;&nbsp i love this aesthetics.</p>
+
+
+<hr style="border:1px solid black; width:370px;float:left; "> <br> <br>
+
+<img class="prof" src="https://www.dropbox.com/scl/fi/232cepacccyoxb8a9wecd/Photo-01-05-2025-18-22-19.jpg?rlkey=nkgaykxckg278g1ocgkfjsfj6&st=azdy3isf&dl=1" style="height:200px; margin-right:21px;"> <h4>Mautin Teniola</h4>
+
+
+<video width="100%" height="400px" controls>
+  <source src="https://www.dl.dropboxusercontent.com/scl/fi/80z1mn6ncg9qj8o31h9g5/Video-04-04-2025-14-52-14.mp4?rlkey=il3k8wac4l3sofblzusfxty1o&st=dxgawlxs" type="video/mp4" style="max-width: 600px; ;width:100%; height:400px;">
+  
+</video>
+<p> <i class="fa-regular fa-heart"></i>250k &nbsp;&nbsp; <i class="fa-regular fa-comment"></i> 5.3k &nbsp;&nbsp; <i class="fa-regular fa-share"></i>10k</p> 
+<p><b>Teni</b>&nbsp;&nbsp sigh.</p>
+
+<hr style="border:1px solid black; width:370px;float:left; "> <br> <br>
+
+<img class="prof" src="https://www.dropbox.com/scl/fi/97lvexlwkpzbtxri975cq/Photo-29-04-2025-09-18-04-1.jpg?rlkey=erk96ewo9p71d0ojfcia1kpf3&st=rf5dg5v9&dl=1" style="height:200px; margin-right:21px;"> <h4>Adebayo Bushrah</h4>
+
+<img src="https://www.dropbox.com/scl/fi/51rt39np1ih894p17ca9q/Photo-01-05-2025-20-37-21-1.jpg?rlkey=mc3lm2gnaxbby6uin1o511adf&st=shuag1z2&dl=1" style="width:100%; max-width: 600px; height:400px;">
+<p> <i class="fa-regular fa-heart"></i>500k &nbsp;&nbsp; <i class="fa-regular fa-comment"></i> 600 &nbsp;&nbsp; <i class="fa-regular fa-share"></i>1k</p> 
+<p><b>Bushrah</b>&nbsp;&nbsp Happy Birthday to me.</p>
+
+
+</div>
+<br> <br>
+
+
+<h2> Friend Requests </h2>
+ <div class="profile"> 
+<div id="req1">
+ <img src="https://www.dropbox.com/scl/fi/jbeqpww0lcrqzc2cvr0tc/Photo-01-05-2025-20-37-21-2.jpg?rlkey=m4gsxo0xtly8u05m9feu5cbzc&st=3cch3k89&dl=1" style="height:400px; max-width: 600px; width:50%; align-items:center;">
+  <p>Famuyede Oluwademilade</p>
+  <div class="button">
+<button onclick="accept('req1')" style="width:150px;" type="button"><i class="fa-solid fa-check"></i></button> 
+ <button onclick="decline('req1')"style="width:150px;" type="button"><i class="fa-solid fa-xmark"></i></button>
+</div>
+</div> <br>
+
+
+
+
+<div id="req2">
+<img src="https://www.dropbox.com/scl/fi/kuqeg3hgailxpqou0l09r/Photo-01-05-2025-20-37-21.jpg?rlkey=dlhn5w9v8x95nx25w5d98jws3&st=cox4rn1v&dl=1" style="height:400px; max-width: 600px; width:50%; align-items:center;">
+<p> Oyenuga Oluwanifemi</p>
+<div class="button">
+<button onclick="accept('req2')" style="width:150px;" type="button"><i class="fa-solid fa-check"></i></button> 
+<button onclick="decline('req2')" style="width:150px;" type="button"><i class="fa-solid fa-xmark"></i></button>
+</div>
+</div> <br>
+
+<div id="req3">
+<img src="https://www.dropbox.com/scl/fi/09ux83zfgqz32ycelylll/Photo-01-05-2025-21-29-30.jpg?rlkey=qeaejgtrmwjp7r1wpjj4253d0&st=uaopdrh0&dl=1" style="height:400px; max-width: 600px;width:50%; align-items:center;">
+<p> Kendal Jenner</p>
+<div class="button">
+<button onclick="accept('req3')" style="width:150px;" type="button"><i class="fa-solid fa-check"></i></button> 
+<button onclick="decline('req3')" style="width:150px;" type="button"><i class="fa-solid fa-xmark"></i></button> </div>
+</div> </div>
+<br> 
+<div id="contact" class="footer"><p>&copy; 2025 Adigun Zainab Ewaoluwa. All rights reserved.</p>
+<p>Connect with me:</p>
+<a href="https://www.linkedin.com/in/ewaoluwa-adigun-9149b21b4" style="color:gray;"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/yourusername" style="color:gray; margin-left:10px;"><i class="fab fa-github"></i></a>
+<p>Email: <a href="mailto:ewaoluwadigun@gmail.com" style="color:gray;">ewaoluwadigun@gmail.com</a></p>
+
+
+
+
+</div>
+
+<script>
+  // Select all heart icons in the feed
+  const likeIcons = document.querySelectorAll('.fa-heart');
+
+  likeIcons.forEach(icon => {
+    icon.style.cursor = 'pointer'; // optional, makes it look clickable
+    icon.addEventListener('click', () => {
+      if (icon.classList.contains('liked')) {
+        icon.classList.remove('liked');
+        icon.style.color = ''; // resets to original color
+      } else {
+        icon.classList.add('liked');
+        icon.style.color = 'red';
+      }
+    });
+  });
+
+
+  
+
+  
+  const toggleBtn = document.getElementById('themeToggle');
+  const body = document.body;
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    
+    if (body.classList.contains('dark')) {
+      toggleBtn.textContent = 'Light Mode';
+    } else {
+      toggleBtn.textContent = 'Dark Mode';
+    }
+  });
+
+
+
+
+
+
+
+
+
+ 
+  function accept(id) {
+    const req = document.getElementById(id);
+    req.innerHTML = "<p style='color:purple; font-weight:bold;'> Added as Friend</p>";
+  }
+
+  function decline(id) {
+    const req = document.getElementById(id);
+    req.style.display = 'none';
+  }
+
+
+  
+/* LIKE BUTTON FUNCTIONALITY */
+function attachLikeEvents() {
+  const likeIcons = document.querySelectorAll('.fa-heart');
+  likeIcons.forEach(icon => {
+    icon.style.cursor = 'pointer';
+    icon.addEventListener('click', () => {
+      let countEl = icon.nextElementSibling; // assuming number is right next to icon
+      let count = parseInt(countEl.textContent.replace(/k|K/g,'')) || 0;
+
+      if (icon.classList.contains('liked')) {
+        icon.classList.remove('liked');
+        icon.style.color = '';
+        countEl.textContent = count - 1;
+      } else {
+        icon.classList.add('liked');
+        icon.style.color = 'red';
+        countEl.textContent = count + 1;
+      }
+    });
+  });
+}
+
+const postBtn = document.getElementById('postBtn');
+const statusInput = document.querySelector('#Posts input[type="text"]');
+const fileInput = document.getElementById('fileInput');
+
+let feed = document.createElement('div');
+feed.id = 'feed';
+document.querySelector('#Posts').appendChild(feed);
+
+postBtn.addEventListener('click', () => {
+  const text = statusInput.value.trim();
+  const files = fileInput.files;
+
+  // Don't allow completely empty posts
+  if (!text && files.length === 0) return;
+
+  const postDiv = document.createElement('div');
+  postDiv.className = 'profile';
+  postDiv.style.marginBottom = '20px';
+
+  // Add text if exists
+  let innerHTML = `<h4>Your Name</h4>`;
+  if (text) {
+    innerHTML += `<p>${text}</p>`;
+  }
+
+  // Add images if any
+  if (files.length > 0) {
+    for (let i = 0; i < files.length; i++) {
+      const imgURL = URL.createObjectURL(files[i]);
+      innerHTML += `<img src="${imgURL}" style="max-width: 100%; height: auto; margin: 10px 0;">`;
+    }
+  }
+
+  // Add like/comment/share section
+  innerHTML += `
+    <p>
+      <i class="fa-regular fa-heart"></i> <span>0</span> &nbsp;
+      <i class="fa-regular fa-comment"></i> 0 &nbsp;
+      <i class="fa-regular fa-share"></i> 0
+    </p>
+    <hr>
+  `;
+
+  postDiv.innerHTML = innerHTML;
+  feed.prepend(postDiv);
+
+  // Clear inputs
+  statusInput.value = '';
+  fileInput.value = '';
+
+  // Make like button work on new post
+  attachLikeEvents();
+});
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> my hotel </title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<style>
+body{background-color:pink;}
+
+
+
+navbar{padding:4px;
+overflow:hidden;
+position: sticky;
+  top: 0;
+  z-index: 1000;
+margin:0;
+border:solid black;
+display:block;}
+
+.navbar a{
+color:pink;
+display:block;		
+text-align:center;
+padding:7px;
+border:5px solid black;
+background-color:black;
+
+text-decoration:none;}
+
+.navbar a:hover{
+background-color:pink;
+color:black;}
+
+
+
+.image-container {
+  width: 100%;
+  position:relative;
+  max-width: 395px;
+  height: auto;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.5);
+}
+
+
+.overlay-text{
+position:absolute;
+background-color:black;
+text-align:center;
+         top: 50%;
+width:250px;
+      left: 10%;
+margin-left:30px;     
+translate:(-50%, -50%);
+color:pink;
+padding:10px;
+margin-top:12px;
+justify-content:center;
+align-items:center;
+
+}
+
+button{background-color:pink;
+color:black;
+float:left;
+padding:5px;
+border:4px solid pink;}
+
+button:hover{background-color:black;
+color:pink;}
+
+
+.long button{width:350px; 
+text-align:center;
+background-color:black;
+color:pink;
+border:3px solid black;
+}
+
+.long button:hover{ background-color:pink;
+color:black;}
+
+.about {background-color:black;
+color:pink;
+width:100%;
+height:270px;
+padding:12px;
+font-size:15px;}
+
+.hot{background-color:hotpink;
+color:black;
+padding:12px;
+text-align:center;
+font-size:16px;}
+
+.below{background-color:black;
+color:pink;
+padding:12px;}
+
+
+@media (max-width: 600px) {
+  .overlay-text {
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+  }
+
+  .navbar a {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .long button {
+    width: 90%;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+}
+
+
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+<div id="home" class="navbar">
+<a href="#home">HOME</a>
+<a href="#room">ROOMS</a>
+<a href="#about">ABOUT</a>
+<a href="#contact">CONTACT</a>
+</div>
+
+
+
+
+
+<div class="image-container">
+<img src="https://www.dropbox.com/scl/fi/97lvexlwkpzbtxri975cq/Photo-29-04-2025-09-18-04-1.jpg?rlkey=erk96ewo9p71d0ojfcia1kpf3&st=2eqksc8j&dl=1"> </div>
+
+<div class="overlay-text"><span style="color:pink;"><b>GLAMs HOTEL<b><br>
+<hr style="width:250px; border:10px auto;">
+<span style="float:left; color:pink;"><label for="check in"> Check In </label></span> <br>
+<input type="text"id="check" placeholder="DD-MM-YY" style="background-color:black;color:pink;width:230px;float:left;" value=""> <br><br>
+<span style="float:left; color:pink;"><label for="check out">Check Out</label></span> <br>
+<input type="text"id="check" placeholder="DD-MM-YY" style="background-color:black;color:pink;width:230px;float:left;" value=""> <br><br>
+<span style="float:left; color:pink;"><label for="adult"> Adults</label></span> <br>
+<input type="text"id="check" placeholder="1" style="background-color:black;color:pink;width:230px;float:left;" value=""> <br> <br>
+<span style="float:left; color:pink;"><label for="kids"> Kids </label></span><br>
+<input type="text"id="check" placeholder="1" style="background-color:black;color:pink;width:230px;float:left;" value=""> <br> <br>
+
+<div class="button">
+<button type="button"> Search availability </button> </div>
+ </div> </div>
+<br> <br> 
+
+<h2 id="room"> Rooms </h2>
+<p>Welcome to GLAMs Hotel, where elegance is redefined.
+A haven of comfort, beauty, and unforgettable moments.
+Step into a world tailored for your rest and delight.
+GLAMs Hotel, your perfect escape, always in style.</p>
+
+
+<span style="float:left; color:pink;"><label for="checkIn"> Check In </label></span> <br>
+<input type="date" id="checkIn" style="background-color:black;color:pink;width:230px;float:left;"> <br><br>
+<span style="float:left; color:pink;"><label for="checkOut">Check Out</label></span> <br>
+<input type="date" id="checkOut" style="background-color:black;color:pink;width:230px;float:left;"> <br><br>
+<span style="float:left; color:pink;"><label for="adults"> Adults</label></span> <br>
+<input type="number" id="adults" value="1" style="background-color:black;color:pink;width:230px;float:left;"> <br> <br>
+<span style="float:left; color:pink;"><label for="kids"> Kids </label></span><br>
+<input type="number" id="kids" value="0" style="background-color:black;color:pink;width:230px;float:left;"> <br> <br>
+
+
+
+<div class="long">
+<button type="button"> Search </button> </div>
+<div class="carousel">
+  <img src="https://www.dropbox.com/scl/fi/zsabz6f72uyq9nsjz9jap/Photo-30-04-2025-17-48-04.jpg?rlkey=ma1ymiy0iflzknzxt5t94u9zl&st=73e294hm&dl=1"  style="display:block; width:100%; height:30%;">
+  <img src="deluxe2.jpg" style="display:none; width:100%; height:30%;">
+  <img src="deluxe3.jpg" style="display:none; width:100%; height:30%;">
+  <button onclick="prevImage()">Prev</button>
+  <button onclick="nextImage()">Next</button>
+</div>
+<h2>Deluxe Room</h2>
+
+
+<p style="opacity:70%;">From #70,000</p>
+<p style="font-size:17px;">King-size bed<br> 40m<sup>2</sup></p>
+<div class="long">
+<button type="button"> Choose room </button> </div> <br> <br>
+
+<img src="https://www.dropbox.com/scl/fi/656a0amx32x3qcjmacgcg/Photo-30-04-2025-17-48-04-1.jpg?rlkey=bamhjwz1ws131sk6xii9i4yv0&st=ajdsivng&dl=1"style="width:100%; height:30%;"> </div> <br>
+ <h2>Double Room<h2>
+<p style="opacity:70%;">From #50,000</p>
+<p style="font-size:17px;">Queen-size bed<br> 25m<sup>2</sup></p>
+<div class="long">
+<button type="button"> Choose room </button> </div> 
+<br> <br>
+
+<img src="https://www.dropbox.com/scl/fi/b060jx6ws44nkuta43s1q/Photo-30-04-2025-17-48-04-1-1.jpg?rlkey=fqcf53fvyvx4mbmr9737mbnlh&st=gtgmt8zp&dl=1" style="width:100%; height:30%;"> </div> <br>
+ <h2>single Room<h2>
+<p style="opacity:70%;">From #25,000</p>
+<p style="font-size:17px;">Single bed<br> 15m<sup>2</sup></p>
+<div class="long">
+<div class="long">
+<button type="button" onclick="bookRoom('Deluxe Room', 70000)">Choose Room</button> 
+</div> <br> <br>
+
+<div class="long">
+<button type="button" onclick="bookRoom('Double Room', 50000)">Choose Room</button> 
+</div> <br> <br>
+
+<div class="long">
+<button type="button" onclick="bookRoom('Single Room', 25000)">Choose Room</button> 
+</div> <br> <br>
+
+
+<div id="about" class="about">
+<h2> About </h2>
+<p>Welcome to Glams Hotel, your serene escape where luxury meets comfort in the heart of elegance. Whether you're traveling for business or leisure, Glams Hotel offers you a perfect blend of modern sophistication and warm hospitality.
+
+Our beautifully designed rooms, exceptional service, and peaceful ambiance ensure a truly unforgettable stay. From cozy suites to stylish interiors, every detail is curated to make you feel pampered and at home.
+
+At Glams Hotel, we don't just offer a place to stay. we offer an experience of glamor, relaxation, and excellence. Your comfort is our priority. </p> </div>
+
+<br>
+ 
+<img src="https://www.dropbox.com/scl/fi/ue8x2f7eehlb4bc8lrdxf/Photo-30-04-2025-18-36-23.jpg?rlkey=yv3qodw9b9in2tsksjozhqdaf&st=9kwqexdp&dl=1" style="width:100%; height:280px;">
+<br> <br>
+<p style="text-align:center">21 pink street, Lagos Nigeria <br> phone:<a href="08076533371" style="color:black;">08076533371</a>
+<br>
+Email:<a href="mailto" style="color:black;">ewaoluwadigun@gmail.com</a>
+
+<br> <br> <br> <br>
+<div class="hot">
+<p>On demand, we can offer playstation, babycall, children care, dog equipment, etc.</p> </div>
+
+<h2> Our Hotels </h2>
+<p>You can find our hotels anywhere in the world:</p>
+
+<p>Nigeria</p>
+<img src="https://www.dropbox.com/scl/fi/8g0a03t0jpzygb39281we/Photo-30-04-2025-22-09-28.jpg?rlkey=igcz8zox1jgvr9u831ca1evh5&st=mbph2229&dl=1" alt="Nigeria" style="width:100%; height:30%;">
+
+<p>New york</p>
+<img src="https://www.dropbox.com/scl/fi/8ymhoj8bf9amx2olzjl6o/Photo-30-04-2025-22-11-40.jpg?rlkey=bwmhv92ug4hro855jmuna8ot0&st=zn77u152&dl=1" alt="New york" style="width:100%; height:30%;">
+
+<br>
+<br>
+<p>Paris</p>
+<img src="https://www.dropbox.com/scl/fi/hm8ondup8szobtuaqplln/Photo-30-04-2025-22-09-54.jpg?rlkey=5wf49eec4gm8huwhzxgzbp7rx&st=qrx91veb&dl=1" alt="paris" style="width:100%; height:30%;">
+<br> <br>
+
+<p>Mexico</p>
+<img src="https://www.dropbox.com/scl/fi/rr91tu839umw2fege29we/Photo-30-04-2025-22-09-15.jpg?rlkey=vq68icanc7c1vc91sy1ggsiom&st=g7uqqrqd&dl=1" alt="Mexico" style="width:100%; height:30%;">
+<br> <br>
+
+<div class="below">
+<h2>Get the best offers first!<h2>
+<p style="font-size:15px;">Join our newsletter. </p>
+<label for="email">E-mail</label>
+<br>
+<input type="text" value="" placeholder="Your Email address" style="background-color:black; color:pink; width:200px;"></input>
+<br> 
+
+<button type="button">Subscribe </button>
+<br> 
+
+</div>
+
+
+<h2 id="contact"> Contact</h2>
+<p>If you have any questions, do not hesitate to ask them.</p>
+
+<p>Lagos, Nigeria.<br>
+<p>phone:<a href="08076533371" style="color:black;">08076533371</a>
+<br>
+E-mail:<a href="mailto" style="color:black;">ewaoluwadigun@gmail.com</a> </p>
+
+<input type="text" value="" placeholder="name" style="background-color:black; color:pink; width:280px; height:25px;"></input><br> <br>
+
+<input type="text" value="" placeholder="Email" style="background-color:black; color:pink; width:280px; height:25px;"></input><br> <br>
+
+<input type="text" value="" placeholder="message" style="background-color:black; color:pink; width:280px; height:25px;"></input><br> <br>
+
+
+
+<div class="long">
+<button type="button" style="width:120px;">Send Message </button>
+
+<br> <br> <br>
+
+<div class="below">
+<p style="text-align:center;">Find Us On <br>
+<i class="fa-brands fa-instagram"></i>
+
+<i class="fa-brands fa-square-x-twitter"></i>
+<i class="fa-brands fa-square-facebook"></i>
+<i class="fa-brands fa-square-snapchat"></i> </p>
+
+  <p>Powered by Zainab Adigun - GLAMs Hotel</p>
+  <p>&copy; 2025 GLAMs Hotel. All rights reserved.</p>
+
+</div>
+
+<script>
+// Smooth scroll for navbar
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+// Booking form validation & summary
+function bookRoom(roomName, price) {
+  const checkIn = document.getElementById('checkIn').value;
+  const checkOut = document.getElementById('checkOut').value;
+  const adults = document.getElementById('adults').value;
+  const kids = document.getElementById('kids').value;
+
+  if (!checkIn || !checkOut) {
+    alert("Please enter both check-in and check-out dates!");
+    return;
+  }
+
+  alert(
+    `Booking Summary:\nRoom: ${roomName}\nCheck-in: ${checkIn}\nCheck-out: ${checkOut}\nAdults: ${adults}\nKids: ${kids}\nTotal: ₦${price.toLocaleString()}`
+  );
+}
+
+// Simple image carousel
+let currentImageIndex = 0;
+const carouselImages = document.querySelectorAll('.carousel img');
+
+function nextImage() {
+  carouselImages[currentImageIndex].style.display = 'none';
+  currentImageIndex = (currentImageIndex + 1) % carouselImages.length;
+  carouselImages[currentImageIndex].style.display = 'block';
+}
+
+function prevImage() {
+  carouselImages[currentImageIndex].style.display = 'none';
+  currentImageIndex = (currentImageIndex - 1 + carouselImages.length) % carouselImages.length;
+  carouselImages[currentImageIndex].style.display = 'block';
+}
+</script>
+
+
+</body>
+
+</html>
+
+
+
+
