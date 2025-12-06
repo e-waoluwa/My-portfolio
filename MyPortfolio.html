@@ -104,6 +104,22 @@ color:var(--bg-color);
 body{background-color:black;
 }
 
+
+            /* Mobile: full viewport height is fine */
+@media (max-width: 768px) {
+  .projects, .contact {
+    height: 100vh;
+  }
+}
+
+/* Desktop: let it grow naturally */
+@media (min-width: 769px) {
+  .projects, .contact {
+    height: auto;
+    overflow: visible;
+  }
+}
+
 .home{
     position:relative;
     width:80%;
